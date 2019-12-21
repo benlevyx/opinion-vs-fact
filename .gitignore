@@ -130,3 +130,6 @@ dmypy.json
 
 # Pycharm and other JetBrains IDE things
 .idea/
+
+# Apple specific
+.DS_Store
