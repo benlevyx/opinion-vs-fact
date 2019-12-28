@@ -3,9 +3,10 @@ import csv
 import pytest
 
 import opinion
+from opinion import config
 
-
-test_urls = csv.reader('test_urls.csv').readlines()
+with (config.tests / 'test_urls.csv').open('r') as csvfile:
+    test_urls = [row for row in csv.reader(csvfile)]
 
 
 def test_nytimes():

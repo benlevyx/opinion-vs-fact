@@ -1,3 +1,6 @@
 {
-    "nytimes.com": "^[\\d/]*/opinion/.*$"
+    "nytimes.com": "/opinion/",
+    "washington.com": "/opinions/",
+    "cnn.com": "/opinions/",
+    "thehill.com": "/(opinion|blogs)/"
 }
