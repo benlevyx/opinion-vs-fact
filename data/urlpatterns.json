@@ -1,6 +1,17 @@
 {
-    "nytimes.com": "/opinion/",
-    "washington.com": "/opinions/",
-    "cnn.com": "/opinions/",
-    "thehill.com": "/(opinion|blogs)/"
+    "all": "/(opinion|editorial)[s]?/",
+    "thehill.com": "/blogs/",
+    "politico": "/magazine/",
+    "theguardian.com": "/commentisfree/",
+    "theatlantic.com": "/ideas/",
+    "independent.co.uk": "/voices/",
+    "nymag.com": "/intelligencer/",
+    "chicagotribune.com": "/columns/",
+    "rollingstone.com": "/political-commentary/",
+    "wired.com": "/opinion-",
+    "dallasnews.com": "/commentary/",
+    "talkingpointsmemo.com": "edblog",
+    "politicususa.com": "/opinion-",
+    "townhall.com": "/columnists/",
+    "rt.com": "op-ed"
 }
