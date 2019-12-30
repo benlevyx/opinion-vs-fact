@@ -12,8 +12,14 @@ def url_is_opinion(url: str) -> bool:
     parsed = urlparse(url)
     domain = parsed.netloc.lstrip('www.')
     path = parsed.path
-    pattern = urlpatterns[domain]
-    return utils.regex_match(pattern, path)
+
+    all_pattern = urlpatterns.get('all')
+    if utils.regex_match(all_pattern, path):
+        return True
+
+    site_pattern = urlpatterns.get(domain, None)
+    if site_pattern:
+        return utils.regex_match(site_pattern, path)
 
 
 def html_is_opinion(html: str) -> bool:
