@@ -14,7 +14,6 @@ pipenv==2018.11.26
 pluggy==0.13.1
 py==1.8.1
 pyparsing==2.4.6
-pytest==5.3.2
 python-jsonrpc-server==0.3.2
 python-language-server==0.31.4
 requests==2.22.0
