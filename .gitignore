@@ -133,3 +133,6 @@ dmypy.json
 
 # Apple specific
 .DS_Store
+
+# Credentials
+apikey

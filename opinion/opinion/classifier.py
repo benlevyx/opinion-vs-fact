@@ -1,9 +1,9 @@
 from urllib.parse import urlparse
 
-from opinion import utils
+from .utils import load_urlpatterns, regex_match
 
 
-urlpatterns = utils.load_urlpatterns()
+urlpatterns = load_urlpatterns()
 
 
 def url_is_opinion(url: str) -> bool:
@@ -14,12 +14,12 @@ def url_is_opinion(url: str) -> bool:
     path = parsed.path
 
     all_pattern = urlpatterns.get('all')
-    if utils.regex_match(all_pattern, path):
+    if regex_match(all_pattern, path):
         return True
 
     site_pattern = urlpatterns.get(domain, None)
     if site_pattern:
-        return utils.regex_match(site_pattern, path)
+        return regex_match(site_pattern, path)
 
 
 def html_is_opinion(html: str) -> bool:
