@@ -1,0 +1,38 @@
+{
+    "all": [],
+    "nytimes.com": {
+        "elem": "a",
+        "attrs": {
+            "data-testid": "story-section",
+            "href": "/section/opinion"
+        }
+    },
+    "washingtonpost.com": {
+        "elem": "a",
+        "attrs": {
+            "href": "https://www.washingtonpost.com/opinions/",
+            "class": "font-bold link blue"
+        }
+    },
+    "cnn.com": {
+        "elem": "a",
+        "attrs": {
+            "aria-label": "Opinion",
+            "data-analytics": "header_top-nav"
+        }
+    },
+    "thehill.com": {
+        "elem": "a",
+        "attrs": {
+            "href": "/opinion",
+            "class": "is-active-train"
+        }
+    },
+    "theguardian.com": {
+        "elem": "a",
+        "attrs": {
+            "class": "content__label__link",
+            "href": "https://www.theguardian.com/uk/commentisfree"
+        }
+    }
+}
