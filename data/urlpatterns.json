@@ -13,5 +13,8 @@
     "talkingpointsmemo.com": "edblog",
     "politicususa.com": "/opinion-",
     "townhall.com": "/columnists/",
-    "rt.com": "op-ed"
+    "rt.com": "op-ed",
+    "vox.com": "/first-person/",
+    "economist.com": "/(bagehots-notebook|bartleby|charlemagnes-notebook|democracy-in-america|erasmus|free-exchange|game-theory|gulliver|prospero)/",
+    "variety.com": "/voices/"
 }

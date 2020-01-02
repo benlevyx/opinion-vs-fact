@@ -34,5 +34,85 @@
             "class": "content__label__link",
             "href": "https://www.theguardian.com/uk/commentisfree"
         }
+    },
+    "wsj": {
+        "elem": "li",
+        "class": "article-breadCrumb",
+        "child": {
+            "elem": "a",
+            "text": "Opinion"
+        }
+    },
+    "time.com": {
+        "elem": "div",
+        "class": "media-img",
+        "text": "IDEAS"
+    },
+    "buzzfeednews.com": {
+        "elem": "li",
+        "class": "news-article-breadcrumbs__label--opinion"
+    },
+    "newsweek.com": {
+        "elem": "header",
+        "class": "article-header",
+        "child": {
+            "elem": "div",
+            "class": "category",
+            "child": {
+                "elem": "a",
+                "href": "/opinion"
+            }
+        }
+    },
+    "nypost.com": {
+        "elem": "p",
+        "class": "section-tag",
+        "child": {
+            "elem": "a",
+            "href": "/opinion/"
+        }
+    },
+    "theintercept.com": {
+        "elem": "div",
+        "class": "Post--opinion"
+    },
+    "dailycaller.com": {
+        "elem": "a",
+        "href": "/section/opinion"
+    },
+    "washingtontimes.com": {
+        "elem": "nav",
+        "id": "breadcrumb",
+        "child": {
+            "elem": "ul",
+            "child": {
+                "elem": "a",
+                "href": "/opinion/"
+            }
+        }
+    },
+    "marketwatch.com": {
+        "elem": "span",
+        "class": "article-template opinion"
+    },
+    "americanindependent.com": {
+        "elem": "a",
+        "class": "entry-crumb",
+        "text": "Opinion"
+    },
+    "foreignpolicy.com": {
+        "elem": "h3",
+        "class": "department",
+        "text": "Voice"
+    },
+    "esquire.com": {
+        "elem": "span",
+        "class": "byline-name",
+        "text": "Charles P. Pierce"
+    },
+    "observer.com": {
+        "elem": "div",
+        "class": "entry-teaser",
+        "text": "Opinion"
     }
 }
