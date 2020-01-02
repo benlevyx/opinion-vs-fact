@@ -1,0 +1,19 @@
+{
+    "nytimes.com": "a[data-testid='story-section'][href='/section/opinion/']",
+    "washingtonpost.com": "a.font-bold.link.blue[href='https://www.washingtonpost.com/opinions/']",
+    "cnn.com": "a[aria-label='Opinion'][data-analytics='header_top-nav']",
+    "thehill.com": "a.is-active-train[href='/opinion']",
+    "wsj.com": "li.article-breadCrumb > a:contains(Opinion)",
+    "time.com": "div.media-img:contains(IDEAS)",
+    "buzzfeednews.com": "li.news-article-breadcrumbs__label--opinion",
+    "newsweek.com": "header.article-header > div.category > a[href='/opinion']",
+    "nypost.com": "p.section-tag > a[href='/opinion/']",
+    "theintercept.com": "div.Post--opinion",
+    "dailycaller.com": "a[href='/section/opinion']",
+    "washingtontimes.com": "nav#breadcrumb > ul > a[href='/opinion/']",
+    "marketwatch.com": "span.article-template.opinion",
+    "americanindependent.com": "a.entry-crumb:contains(Opinion)",
+    "foreignpolicy.com": "h3.department:contains(Voice)",
+    "esquire.com": "span.byline-name:contains('Charles P. Pierce')",
+    "observer.com": "div.entry-teaser:contains(Opinion)"
+}

@@ -35,7 +35,7 @@
             "href": "https://www.theguardian.com/uk/commentisfree"
         }
     },
-    "wsj": {
+    "wsj.com": {
         "elem": "li",
         "class": "article-breadCrumb",
         "child": {
