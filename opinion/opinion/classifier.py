@@ -1,17 +1,18 @@
 from urllib.parse import urlparse
 
-from .utils import load_urlpatterns, regex_match
+from bs4 import BeautifulSoup
+
+from .utils import load_json_from_data, regex_match, parse_url
 
 
-urlpatterns = load_urlpatterns()
+urlpatterns = load_json_from_data('urlpatterns.json')
+htmlselectors = load_json_from_data('htmlselectors.json')
 
 
 def url_is_opinion(url: str) -> bool:
     """Return true if the URL is an opinion article.
     """
-    parsed = urlparse(url)
-    domain = parsed.netloc.lstrip('www.')
-    path = parsed.path
+    domain, path = parse_url(url)
 
     all_pattern = urlpatterns.get('all')
     if regex_match(all_pattern, path):
@@ -22,10 +23,12 @@ def url_is_opinion(url: str) -> bool:
         return regex_match(site_pattern, path)
 
 
-def html_is_opinion(html: str) -> bool:
+def html_is_opinion(url: str, html: str) -> bool:
     """Return true if the HTML is an opinion article.
     """
-    pass
+    domain, path = parse_url(url)
+
+    soup = BeautifulSoup(html)
 
 
 def text_is_opinion(text: str) -> bool:
