@@ -1,6 +1,3 @@
-from urllib.parse import urlparse
-
-from bs4 import BeautifulSoup
 from lxml import etree
 
 from .utils import load_json_from_data, regex_match, parse_url

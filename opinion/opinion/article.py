@@ -31,7 +31,7 @@ class Article:
             if url_is_opinion(self.url):
                 return True
         if self.html:
-            if html_is_opinion(self.html):
+            if html_is_opinion(self.url, self.html):
                 return True
         if self.text:
             return self.text_is_opinion(self.text)
