@@ -1,6 +1,7 @@
 from urllib.parse import urlparse
 
 from bs4 import BeautifulSoup
+from lxml import etree
 
 from .utils import load_json_from_data, regex_match, parse_url
 
@@ -27,8 +28,14 @@ def html_is_opinion(url: str, html: str) -> bool:
     """Return true if the HTML is an opinion article.
     """
     domain, path = parse_url(url)
-
-    soup = BeautifulSoup(html)
+    selector = htmlselectors.get(domain, False)
+    if not selector:
+        return False
+    parsed = etree.fromstring(html)
+    if len(parsed.cssselect(selector)) > 0:
+        return True
+    else:
+        return False
 
 
 def text_is_opinion(text: str) -> bool:
