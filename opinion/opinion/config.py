@@ -11,3 +11,5 @@ results = root / 'results'
 src = root / 'src'
 tests = root / 'tests'
 apikey = root / 'apikey'
+
+MODEL_VERSION = 0.1

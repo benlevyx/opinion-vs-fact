@@ -39,4 +39,4 @@ def html_is_opinion(url: str, html: str) -> bool:
 def text_is_opinion(text: str) -> bool:
     """Return true if the text is an opinion article.
     """
-    pass
+    return False
