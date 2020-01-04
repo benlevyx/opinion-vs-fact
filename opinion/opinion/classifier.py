@@ -5,6 +5,7 @@ from .utils import load_json_from_data, regex_match, parse_url
 
 urlpatterns = load_json_from_data('urlpatterns.json')
 htmlselectors = load_json_from_data('htmlselectors.json')
+parser = etree.HTMLParser()
 
 
 def url_is_opinion(url: str) -> bool:
@@ -28,7 +29,7 @@ def html_is_opinion(url: str, html: str) -> bool:
     selector = htmlselectors.get(domain, False)
     if not selector:
         return False
-    parsed = etree.fromstring(html)
+    parsed = etree.fromstring(html, parser)
     if len(parsed.cssselect(selector)) > 0:
         return True
     else:
