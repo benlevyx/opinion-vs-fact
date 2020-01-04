@@ -1,9 +1,12 @@
+import json
+
 from .classifier import (url_is_opinion, html_is_opinion,
                          text_is_opinion)
+from .error import ArticleError
 
 
 class Article:
-    def __init__(self, url=None, html=None, text=None):
+    def __init__(self, url=None, html=None, text=None, jsonResponse=None):
         """Initialize a new Article
 
         Keyword Arguments:
@@ -14,10 +17,21 @@ class Article:
             The raw HTML of the article.
         text: str, default None
             The text of the article.
+        jsonResponse: dict|str
+            The raw response from a call to the Mediacloud Admin API.
         """
-        self.url = url
-        self.html = html
-        self.text = text
+        if not any((url, html, text)):
+            if not jsonResponse:
+                raise ArticleError("Must provide one of (url, html, text, or jsonResponse)")
+            if type(jsonResponse) == str:
+                jsonResponse = json.load(jsonResponse)
+            self.url = jsonResponse.get('url', None)
+            self.html = jsonResponse.get('raw_first_download_file', None)
+            self.text = jsonResponse.get('story_text', None)
+        else:
+            self.url = url
+            self.html = html
+            self.text = text
 
     def is_opinion(self) -> True:
         """Return True if the article is an opinion article.
@@ -34,5 +48,5 @@ class Article:
             if html_is_opinion(self.url, self.html):
                 return True
         if self.text:
-            return self.text_is_opinion(self.text)
+            return text_is_opinion(self.text)
         return False
