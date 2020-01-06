@@ -6,7 +6,18 @@ from opinion import api, article
 mc = api.get_api_conn()
 
 
-def test_api_simple():
+def test_api_url():
+    # nytimes.com: 'Melissa Harris-Perry Says MSNBC Show Deserved
+    # ‘Proper Burial’'
+    story_id = 1475475904
+    _run_test(story_id, True)
+
+
+def test_api_html():
     story_id = 502218391
-    jsonResponse = mc.story(story_id, raw_1st_download=True, text=True)
-    assert article.is_opinion(jsonResponse)
+    _run_test(story_id, True)
+
+
+def _run_test(story_id: int, is_opinion: bool) -> None:
+    jsonResponse = mc.story(story_id, raw_1st_download=True)
+    assert article.is_opinion(jsonResponse)['is_opinion'] == is_opinion
