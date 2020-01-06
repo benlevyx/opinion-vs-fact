@@ -58,7 +58,7 @@ def is_opinion(jsonResponse: Union[dict, str]):
     """
     Arguments:
     ----------
-    jsonResponse: dict|str
+jsonResponse: dict|str
         The raw response from a call to the Mediacloud Admin API.
 
     Returns:
@@ -67,7 +67,6 @@ def is_opinion(jsonResponse: Union[dict, str]):
     information about whether the article is opinion or not.
     """
     story_id, url, html, text = _unpack_json(jsonResponse)
-    print(url)
     story_is_opinion, confidence = _is_opinion(url, html, text)
     return _pack_json(story_id, story_is_opinion, confidence)
 
@@ -117,4 +116,4 @@ def _is_opinion(url: str, html: str, text: str) -> Tuple[bool, Union[int, float]
             return True, 1.0
     if text:
         return text_is_opinion(text)
-    return False
+    return False, 0.0

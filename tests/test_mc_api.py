@@ -19,4 +19,4 @@ def test_api_html():
 
 def _run_test(story_id: int, is_opinion: bool) -> None:
     jsonResponse = mc.story(story_id, raw_1st_download=True)
-    assert article.is_opinion(jsonResponse)['is_opinion'] == is_opinion
+    assert article.is_opinion(jsonResponse)[story_id]['is_opinion'] == is_opinion

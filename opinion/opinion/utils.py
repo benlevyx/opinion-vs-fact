@@ -12,7 +12,7 @@ def load_json_from_data(fname: str) -> dict:
 def regex_match(regex, text) -> bool:
     """Return True if the text matches the regex
     """
-    return bool(re.match(regex, text))
+    return re.search(regex, text) is not None
 
 
 def get_apikey() -> str:

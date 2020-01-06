@@ -16,10 +16,10 @@ def url_is_opinion(url: str) -> bool:
     all_pattern = urlpatterns.get('all')
     if regex_match(all_pattern, path):
         return True
-
     site_pattern = urlpatterns.get(domain, None)
     if site_pattern:
         return regex_match(site_pattern, path)
+    return False
 
 
 def html_is_opinion(url: str, html: str) -> bool:
@@ -29,11 +29,13 @@ def html_is_opinion(url: str, html: str) -> bool:
     selector = htmlselectors.get(domain, False)
     if not selector:
         return False
-    parsed = etree.fromstring(html, parser)
+    try:
+        parsed = etree.fromstring(html, parser)
+    except ValueError:
+        return False
     if len(parsed.cssselect(selector)) > 0:
         return True
-    else:
-        return False
+    return False
 
 
 def text_is_opinion(text: str) -> bool:
