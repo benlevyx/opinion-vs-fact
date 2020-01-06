@@ -1,5 +1,5 @@
 import json
-from typing import Tuple, Union, Numeric
+from typing import Tuple, Union
 
 from .classifier import (url_is_opinion, html_is_opinion,
                          text_is_opinion)
@@ -96,7 +96,7 @@ def _pack_json(story_id, story_is_opinion, confidence) -> dict:
     }
 
 
-def _is_opinion(url: str, html: str, text: str) -> Tuple[bool, Numeric]:
+def _is_opinion(url: str, html: str, text: str) -> Tuple[bool, Union[int, float]]:
     """Return True if the article is an opinion article.
 
     Tries features in this order:
