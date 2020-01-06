@@ -32,6 +32,7 @@ def html_is_opinion(url: str, html: str) -> bool:
     try:
         parsed = etree.fromstring(html, parser)
     except ValueError:
+        print("Parsing failed")
         return False
     if len(parsed.cssselect(selector)) > 0:
         return True
