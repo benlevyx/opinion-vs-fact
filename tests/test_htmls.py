@@ -6,6 +6,7 @@ from opinion import config, article
 
 
 def test_simple_pos():
+    # This isn't working at the moment. WaPo isn't the best tester
     _run_test('https://www.washingtonpost.com/most-of-us-are-bad-at-apologizing-the-pope-just-showed-us-how-its-done/2020/01/02/711aea90-2d99-11ea-bcb3-ac6482c4a92f_story.html',
               'washingtonpost-pos.html', True)
 
