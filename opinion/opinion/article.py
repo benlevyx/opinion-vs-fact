@@ -67,6 +67,7 @@ def is_opinion(jsonResponse: Union[dict, str]):
     information about whether the article is opinion or not.
     """
     story_id, url, html, text = _unpack_json(jsonResponse)
+    print(url)
     story_is_opinion, confidence = _is_opinion(url, html, text)
     return _pack_json(story_id, story_is_opinion, confidence)
 

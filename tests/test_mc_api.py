@@ -7,8 +7,7 @@ mc = api.get_api_conn()
 
 
 def test_api_url():
-    # nytimes.com: 'Melissa Harris-Perry Says MSNBC Show Deserved
-    # ‘Proper Burial’'
+    # nytimes.com: 'How Has This Pesticide Not Been Banned?'
     story_id = 1475475904
     _run_test(story_id, True)
 
