@@ -1,6 +1,6 @@
 {
     "nytimes.com": "a[data-testid='story-section'][href='/section/opinion/']",
-    "washingtonpost.com": "a.font-bold.link.blue[href='https://www.washingtonpost.com/opinions/']",
+    "washingtonpost.com": "div.font--subhead.kicker > a[href='/opinions']",
     "cnn.com": "a[aria-label='Opinion'][data-analytics='header_top-nav']",
     "thehill.com": "a.is-active-train[href='/opinion']",
     "wsj.com": "li.article-breadCrumb > a:contains(Opinion)",
