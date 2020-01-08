@@ -27,6 +27,6 @@ def parse_url(url: str) -> tuple:
     """Parse a URL string into domain and path.
     """
     parsed = urlparse(url)
-    domain = parsed.netloc.lstrip('www.')
+    domain = parsed.netloc.replace('www.', '')
     path = parsed.path
     return domain, path
