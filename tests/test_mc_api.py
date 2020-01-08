@@ -13,7 +13,7 @@ def test_api_url():
 
 
 def test_api_html():
-    story_id = 502218391
+    story_id = 1387699345
     _run_test(story_id, True)
 
 

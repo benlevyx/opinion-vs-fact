@@ -28,11 +28,11 @@ def html_is_opinion(url: str, html: str) -> bool:
     domain, path = parse_url(url)
     selector = htmlselectors.get(domain, False)
     if not selector:
+        print('No known URL pattern for {}'.format(domain))
         return False
     try:
         parsed = etree.fromstring(html, parser)
     except ValueError:
-        print("Parsing failed")
         return False
     if len(parsed.cssselect(selector)) > 0:
         return True
