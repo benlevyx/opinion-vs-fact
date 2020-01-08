@@ -10,13 +10,13 @@ def is_opinion(jsonResponse: Union[dict, str]):
     """
     Arguments:
     ----------
-jsonResponse: dict|str
+    jsonResponse: dict|str
         The raw response from a call to the Mediacloud Admin API.
 
     Returns:
     --------
     dict: JSON-like object containing story_id as key, and inner_dict with
-    information about whether the article is opinion or not.
+        information about whether the article is opinion or not.
     """
     story_id, url, html, text = _unpack_json(jsonResponse)
     story_is_opinion, confidence = _is_opinion(url, html, text)
