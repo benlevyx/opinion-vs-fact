@@ -15,5 +15,7 @@
     "americanindependent.com": "a.entry-crumb:contains(Opinion)",
     "foreignpolicy.com": "h3.department:contains(Voice)",
     "esquire.com": "span.byline-name:contains('Charles P. Pierce')",
-    "observer.com": "div.entry-teaser:contains(Opinion)"
+    "observer.com": "div.entry-teaser:contains(Opinion)",
+    "huffpost.com": "a.entry-eyebrow__link.yr-department-link[data-linkname='huffpost personal']",
+    "insider.com": "div.content-header >"
 }

@@ -15,7 +15,7 @@ https://thehill.com
 
 https://politico.com
 
-https://abcnews.go.com
+https://abcnews.go.com (no opinion)
 
 https://huffingtonpost.com
 
@@ -27,11 +27,11 @@ https://wsj.com
 
 https://usatoday.com
 
-https://npr.org
+https://npr.org (no opinion)
 
-https://cbsnews.com
+https://cbsnews.com (no opinion)
 
-https://reuters.com
+https://reuters.com (no opinion)
 
 https://foxnews.com
 
