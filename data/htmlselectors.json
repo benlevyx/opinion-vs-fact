@@ -17,5 +17,5 @@
     "esquire.com": "span.byline-name:contains('Charles P. Pierce')",
     "observer.com": "div.entry-teaser:contains(Opinion)",
     "huffpost.com": "a.entry-eyebrow__link.yr-department-link[data-linkname='huffpost personal']",
-    "insider.com": "div.content-header >"
+    "insider.com": "meta['property'=article:opinion]"
 }
