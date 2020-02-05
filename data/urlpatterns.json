@@ -2,6 +2,7 @@
     "all": "/(opinion|editorial)[s]?/",
     "thehill.com": "/blogs/",
     "politico": "/magazine/",
+    "newyorker.com": "/magazine/",
     "theguardian.com": "/commentisfree/",
     "theatlantic.com": "/ideas/",
     "independent.co.uk": "/voices/",
@@ -16,5 +17,8 @@
     "rt.com": "op-ed",
     "vox.com": "/first-person/",
     "economist.com": "/(bagehots-notebook|bartleby|charlemagnes-notebook|democracy-in-america|erasmus|free-exchange|game-theory|gulliver|prospero)/",
-    "variety.com": "/voices/"
+    "variety.com": "/voices/",
+    "nationalreview.com": "/(corner|bench-memos|the-morning-jolt|g-file)/",
+    "dailywire.com": "/discussion/",
+    "inquirer.com": "/(columnists|commentary)/"
 }

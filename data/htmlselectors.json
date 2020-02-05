@@ -17,5 +17,8 @@
     "esquire.com": "span.byline-name:contains('Charles P. Pierce')",
     "observer.com": "div.entry-teaser:contains(Opinion)",
     "huffpost.com": "a.entry-eyebrow__link.yr-department-link[data-linkname='huffpost personal']",
-    "insider.com": "meta['property'=article:opinion]"
+    "insider.com": "meta['property'=article:opinion]",
+    "vanityfair.com": "meta['property'=article:opininon]['content'=true]",
+    "telegraph.co.uk": "meta['name'=keywords]['content'*=Opinion]",
+    "realclearpolitics.com": "div.article-subtitle:contains(COMMENTARY)"
 }
