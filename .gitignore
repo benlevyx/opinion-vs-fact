@@ -138,7 +138,7 @@ dmypy.json
 apikey
 
 # Microsoft office files
-.xls
-.xlsx
-.doc
-.ppt
+*.xls
+*.xlsx
+*.doc
+*.ppt
