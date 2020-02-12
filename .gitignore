@@ -136,3 +136,9 @@ dmypy.json
 
 # Credentials
 apikey
+
+# Microsoft office files
+.xls
+.xlsx
+.doc
+.ppt
