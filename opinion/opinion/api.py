@@ -17,19 +17,19 @@ def get_api_conn(apikey=None):
 
 def download_media_ids(fout: str):
     media = []
-    start = 0
-    rows = 100
+    last_media_id = 0
+    rows = 1000
     while True:
-        params = { 'start': start, 'rows': rows, 'key': MY_KEY }
-        print("start:{} rows:{}".format( start, rows))
+        params = { 'last_media_id': last_media_id, 'rows': rows, 'key': MY_KEY }
+        print("last_media_id:{} rows:{}".format( last_media_id, rows))
         r = requests.get( 'https://api.mediacloud.org/api/v2/media/list', params = params, headers = { 'Accept': 'application/json'} )
         data = r.json()
 
         if len(data) == 0:
             break
 
-        start += rows
-        media.extend(data)
+        last_media_id = data[-1]['media_id']
+        media.extend( data )
 
     fieldnames = [
         u'media_id',
@@ -37,7 +37,7 @@ def download_media_ids(fout: str):
         u'name'
     ]
 
-    with open((data / fout), 'wb') as csvfile:
+    with open( '/tmp/media.csv', 'wb') as csvfile:
         print("open")
         cwriter = csv.DictWriter( csvfile, fieldnames, extrasaction='ignore')
         cwriter.writeheader()
