@@ -43,7 +43,7 @@ def _pack_json(story_id, story_is_opinion, confidence) -> dict:
         story_id: {
             'is_opinion': story_is_opinion,
             'confidence': confidence,
-            'model_verison': MODEL_VERSION
+            'model_version': MODEL_VERSION
         }
     }
 
