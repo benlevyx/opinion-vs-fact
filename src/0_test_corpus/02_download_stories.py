@@ -15,7 +15,7 @@ mc = api.get_api_conn()
 
 def filter_sources(df):
     df_filtered = df.query('has_opinion == "yes" & keep == 1')
-    df_filtered = df_filtered.drop_duplicates('media_source')
+    # df_filtered = df_filtered.drop_duplicates('media_source')
     return df_filtered
 
 
