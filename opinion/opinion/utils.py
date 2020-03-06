@@ -1,6 +1,8 @@
+import os
 import json
 import re
 from urllib.parse import urlparse
+from contextlib import contextmanager
 
 from .config import data, apikey
 
@@ -30,3 +32,14 @@ def parse_url(url: str) -> tuple:
     domain = parsed.netloc.replace('www.', '')
     path = parsed.path
     return domain, path
+
+
+@contextmanager
+def suppress_stream(stream):
+    with open(os.devnull, "w") as devNull:
+        orig = stream
+        stream = devNull
+        try:
+            yield
+        finally:
+            stream = orig

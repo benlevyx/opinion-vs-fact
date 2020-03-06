@@ -67,5 +67,6 @@ def _is_opinion(url: str, html: str, text: str) -> Tuple[bool, Union[int, float]
         if html_is_opinion(url, html):
             return True, 1.0
     if text:
-        return text_is_opinion(text)
+        if text_is_opinion(text):
+            return True, 0.0
     return False, 0.0
