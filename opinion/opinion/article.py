@@ -4,9 +4,10 @@ from typing import Tuple, Union
 from .classifier import (url_is_opinion, html_is_opinion,
                          text_is_opinion)
 from .config import MODEL_VERSION
+from .api import get_api_conn
 
 
-def is_opinion(jsonResponse: Union[dict, str]):
+def is_opinion(jsonResponse: Union[dict, str]) -> dict:
     """
     Arguments:
     ----------
@@ -70,3 +71,14 @@ def _is_opinion(url: str, html: str, text: str) -> Tuple[bool, Union[int, float]
         if text_is_opinion(text):
             return True, 0.0
     return False, 0.0
+
+
+def stories_id_is_opinion(stories_id: Union[int, str], api_conn=None) -> dict:
+    """Return true if story corresponding to `stories_id` is opinion.
+    """
+    if api_conn is None:
+        mc = get_api_conn()
+    else:
+        mc = api_conn
+    json_response = mc.story(int(stories_id))
+    return is_opinion(json_response)
