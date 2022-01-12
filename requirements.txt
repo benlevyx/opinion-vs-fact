@@ -10,7 +10,7 @@ more-itertools==8.0.2
 -e git+https://github.com/benlevyx/opinion-vs-fact.git@5f4ff19940963a222a6698cfc5bf8f45dfd51552#egg=opinion&subdirectory=opinion
 packaging==19.2
 parso==0.5.2
-pipenv==2018.11.26
+pipenv==2022.1.8
 pluggy==0.13.1
 py==1.8.1
 pyparsing==2.4.6
